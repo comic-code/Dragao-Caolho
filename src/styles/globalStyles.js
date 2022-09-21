@@ -65,6 +65,49 @@ const GlobalStyle = createGlobalStyle`
       padding: 0.25rem;
     }
   }
+
+  input, select {
+    border: 2px solid var(--blueDark);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+  }
+
+
+  .animationLeft {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: animationShow 0.7s forwards; 
+  }
+  .animationRight {
+    opacity: 0;
+    transform: translateX(20px);
+    animation: animationShow 0.7s forwards; 
+  }
+  .animationDown {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: animationShow 0.5s forwards; 
+  }
+  .animationUp {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: animationShow 0.5s forwards; 
+  }
+  .animationShow {
+    opacity: 0;
+    animation: animationShow 0.5s forwards; 
+  }
+  .animationPulsate {
+    animation: animationPulsate 1.5s ease-in-out infinite both;
+  }
+
+  @keyframes animationShow {
+    to {
+      opacity: 1;
+      transform: initial;
+    }
+  }
 `;
 
 export default GlobalStyle;
