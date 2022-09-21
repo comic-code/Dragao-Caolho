@@ -9,17 +9,21 @@ export const SpellWrapper = styled.div`
   min-width: 25%;
   max-width: 450px;
   align-self: baseline;
+  position: relative;
   font-size: 0.85rem;
 
-  span.page {
-    border-bottom-right-radius: 0.3rem;
-    padding: 0.1rem;
-    background-color: var(--brown);
+  span.mark {
+    position: absolute;
+    top: 0;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;    
+    width: 1rem;
+    height: 2.75rem;
+    right: 3rem;
+    background-color: var(--red);
     color: var(--white);
     float: right;
-    margin-top: -10px;
-    margin-bottom: -10px;
-    margin-right: -10px;
     border: 2px solid var(--blueDark);
+    border-top-width: 0;
   }
 `;
