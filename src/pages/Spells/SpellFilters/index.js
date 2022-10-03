@@ -43,14 +43,13 @@ export default function SpellFilters({ setFilteredSpells, spellList, justSavedSp
       })
       setFilteredSpells(filtered);
     }
-  }, [name, classe, school, show, justSavedSpells]);
+  }, [name, classe, school, show, justSavedSpells, savedSpells, spellList, setFilteredSpells]);
 
   return (
     <SpellFIltersWrapper show={show}>
       <button className="toggleFilter" onClick={() => {setShow(!show)}}>
         <div>
-          <FilterIcon size={20} />
-          Filtros
+          <FilterIcon size={20} /> Filtros
         </div>
         {show
           ? <UpIcon size={20} className="animationShow"/>

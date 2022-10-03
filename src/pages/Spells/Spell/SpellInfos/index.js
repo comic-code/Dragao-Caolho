@@ -18,7 +18,7 @@ export default function SpellInfos({ spell }) {
       </span>
       <span className="card">
         <img src={Duration} alt="Duração" />
-        {spell.duration.value != 0 && spell.duration.value}
+        {spell.duration.value !== 0 && spell.duration.value}
         &nbsp;{spell.duration.unit}
       </span>
     </SpellInfosWrapper>

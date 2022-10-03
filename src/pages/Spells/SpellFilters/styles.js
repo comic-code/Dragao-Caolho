@@ -8,7 +8,7 @@ export const SpellFIltersWrapper = styled.div`
   margin: 1rem 0.5rem;
   margin-bottom: 0.5rem;
   border-radius: 0.5rem;
-  max-height: ${props => props.show ? '13rem' :'calc(2rem + 5px)'};
+  max-height: ${props => props.show ? '13rem' : 'calc(2rem + 5px)'};
   transition: 0.2s max-height;
   display: flex;
   flex-direction: column;

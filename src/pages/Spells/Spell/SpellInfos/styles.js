@@ -10,6 +10,7 @@ export const SpellInfosWrapper = styled(Row)`
     align-items: center;
     flex-direction: column;
     font-size: 0.9rem;
+    text-align: center;
     border: 2px solid var(--blueDark);
     padding: 0.5rem;
     border-radius: 0.5rem;
