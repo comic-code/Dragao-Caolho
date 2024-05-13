@@ -1,15 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { SpellFIltersWrapper, FilterIcon, DownIcon, UpIcon, Filter } from "./styles";
 import filters from './filters';
+import {GlobalContext} from '../../../contexts/Global';
 
 export default function SpellFilters({ setFilteredSpells, spellList, justSavedSpells, savedSpells }) {
+  const { setIsFilteringSpells } = useContext(GlobalContext);
   const [show, setShow] = useState(false);
   const [name, setName] = useState('');
   const [classe, setClasse] = useState('');
   const [school, setSchool] = useState(''); 
+  const [level, setLevel] = useState(''); 
   
   function handleClear() {
-    setName(''); setClasse(''); setSchool('');
+    setName(''); setClasse(''); setSchool(''); setLevel('');
   }
 
   useEffect(() => {
@@ -23,27 +26,39 @@ export default function SpellFilters({ setFilteredSpells, spellList, justSavedSp
         toFilter = [...spellList];
       }
       
-      const filtered = toFilter.filter(spell => {
-        const nameLowercase = spell.name.toLowerCase();
-        const originalNameLowercase = spell.originalName.toLowerCase();
-        if(nameLowercase.includes(name.toLocaleLowerCase()) 
-        || originalNameLowercase.includes(name.toLocaleLowerCase())) {
-          if(!classe && !school) {
-            return true
-          } else if(classe && !school) {
-            return spell.classes.includes(classe);
-          } else if(!classe && school) {
-            return spell.school === school
-          } else {
-            return spell.classes.includes(classe) && spell.school === school
-          }
-        } else {
-          return false
-        }
-      })
+      let filtered =  []
+      
+      if(name) {
+        filtered = toFilter.filter(spell => {
+          const nameLowercase = spell.name.toLowerCase();
+          const originalNameLowercase = spell.originalName.toLowerCase();
+  
+          return (nameLowercase.includes(name.toLocaleLowerCase()) || originalNameLowercase.includes(name.toLocaleLowerCase()))
+
+        });
+      }
+
+      if(classe) {
+        filtered = filtered.length 
+          ? filtered.filter(spell => spell.classes.includes(classe)) 
+          : toFilter.filter(spell => spell.classes.includes(classe)) 
+      }
+      
+      if(level !== "") {
+        filtered = filtered.length 
+        ? filtered.filter(spell => spell.level == level) 
+        : toFilter.filter(spell => spell.level == level) 
+      }
+
+      if(school) {
+        filtered = filtered.length 
+        ? filtered.filter(spell => spell.school.includes(school)) 
+        : toFilter.filter(spell => spell.school.includes(school)) 
+      }
+      setIsFilteringSpells(name || classe || level !== "" || school ? true : false);
       setFilteredSpells(filtered);
     }
-  }, [name, classe, school, show, justSavedSpells, savedSpells, spellList, setFilteredSpells]);
+  }, [name, classe, school, level, show, justSavedSpells, savedSpells, spellList, setFilteredSpells]);
 
   return (
     <SpellFIltersWrapper show={show}>
@@ -66,6 +81,18 @@ export default function SpellFilters({ setFilteredSpells, spellList, justSavedSp
           <select value={classe} onChange={e => setClasse(e.target.value)}>
             <option value="">Todas</option>
             {filters.classes.map(classe => <option key={classe} value={classe}>{classe}</option>)}
+          </select>
+        </label>
+        <label>
+          Nível:
+          <select value={level} onChange={e => setLevel(e.target.value)}>
+            <option value="">Todos</option>
+            {filters.levels.map(level => <option key={level} value={level}>
+              {level === 0 
+                ? 'Truque'
+                : `Nível ${level}`
+              }
+            </option>)}
           </select>
         </label>
         <label>

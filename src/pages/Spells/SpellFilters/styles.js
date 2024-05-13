@@ -17,8 +17,11 @@ export const SpellFIltersWrapper = styled.div`
 
   @media (max-width: 700px) {
     width: 100%;
+    max-height: ${props => props.show ? '15rem' : 'calc(2rem + 5px)'};
     
   }
+
+
 
   button.toggleFilter {
     display: flex;

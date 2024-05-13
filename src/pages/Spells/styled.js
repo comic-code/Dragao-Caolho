@@ -5,6 +5,7 @@ export const SpellsContainer = styled.main`
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
+  padding-bottom: 5rem;
 
   .noSpells {
     margin-top: 5rem;

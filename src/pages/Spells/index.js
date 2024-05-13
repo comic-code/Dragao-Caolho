@@ -12,8 +12,8 @@ import SpellFilters from './SpellFilters';
 export default function Spells() {
   const [filteredSpells, setFilteredSpells] = useState([]);
   const [justSavedSpells, setJustSavedSpells] = useState(false);
-  const { savedSpells } = useContext(GlobalContext);
-
+  const { savedSpells, isFilteringSpells } = useContext(GlobalContext);
+console.log(isFilteringSpells)
   return (
     <SpellsContainer>
       <SpellFilters setFilteredSpells={setFilteredSpells} spellList={SpellList} 
@@ -32,6 +32,14 @@ export default function Spells() {
         )
       ) : filteredSpells.length > 0 
           ? filteredSpells.map(spell => <Spell key={spell.name} spell={spell} />)
+          : isFilteringSpells ? 
+            (
+              <span className="noSpells">
+                <img src={SkullIcon} alt="_blank" />
+                Magia Não Encontrada
+                <img src={SkullIcon} alt="_blank" />
+              </span>
+            )
           : SpellList.map(spell => <Spell key={spell.name} spell={spell} />)
       }
 
