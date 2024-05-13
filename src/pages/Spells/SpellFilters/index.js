@@ -58,7 +58,7 @@ export default function SpellFilters({ setFilteredSpells, spellList, justSavedSp
       setIsFilteringSpells(name || classe || level !== "" || school ? true : false);
       setFilteredSpells(filtered);
     }
-  }, [name, classe, school, level, show, justSavedSpells, savedSpells, spellList, setFilteredSpells]);
+  }, [name, classe, school, level, justSavedSpells, savedSpells, spellList, setFilteredSpells]);
 
   return (
     <SpellFIltersWrapper show={show}>

@@ -8,6 +8,7 @@ import GrimoireIcon from '../../assets/icons/favorite.png';
 import SkullIcon from '../../assets/icons/skull.png';
 import OpenGrimoireIcon from '../../assets/icons/openGrimoire.png';
 import SpellFilters from './SpellFilters';
+import SpellsQuestions from './Spell/SpellsQuestions';
 
 export default function Spells() {
   const [filteredSpells, setFilteredSpells] = useState([]);
@@ -15,6 +16,7 @@ export default function Spells() {
   const { savedSpells, isFilteringSpells } = useContext(GlobalContext);
   return (
     <SpellsContainer>
+      <SpellsQuestions />
       <SpellFilters setFilteredSpells={setFilteredSpells} spellList={SpellList} 
         justSavedSpells={justSavedSpells} savedSpells={savedSpells} />
 
