@@ -21,8 +21,6 @@ export const SpellFIltersWrapper = styled.div`
     
   }
 
-
-
   button.toggleFilter {
     display: flex;
     justify-content: space-between;

@@ -25,8 +25,10 @@ export default function SpellHeader({ spell }) {
   return (
     <SpellHeaderWrapper>
       <Row>
-        <h2>{spell.name}</h2>
-        <h3>&nbsp;({spell.originalName})</h3>
+        <div>
+          <h2>{spell.name}</h2>
+          <h3 className='originalName'>&nbsp;({spell.originalName})</h3>
+        </div>
         <button onClick={handleFavorite}>
           <img src={isSaved ? Favorite : Unfavorite} alt={isSaved ? 'Desfavoritar' : 'Favoritar'} />
         </button>

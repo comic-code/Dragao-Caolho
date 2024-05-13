@@ -17,8 +17,14 @@ export const SpellHeaderWrapper = styled.header`
 
   h3 {
     font-family: 'Spectral SC', serif;
+    font-weight: bold;
     font-size: 0.8rem;
-    font-weight: 400;
+    
+    &.originalName {
+      font-size: 0.8rem;
+      color: #888;
+      font-weight: 400;
+    }
   }
 
   button {

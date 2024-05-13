@@ -13,7 +13,6 @@ export default function Spells() {
   const [filteredSpells, setFilteredSpells] = useState([]);
   const [justSavedSpells, setJustSavedSpells] = useState(false);
   const { savedSpells, isFilteringSpells } = useContext(GlobalContext);
-console.log(isFilteringSpells)
   return (
     <SpellsContainer>
       <SpellFilters setFilteredSpells={setFilteredSpells} spellList={SpellList} 
