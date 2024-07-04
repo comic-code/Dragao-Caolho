@@ -15,8 +15,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -71,8 +71,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -126,8 +126,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -174,8 +174,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -224,8 +224,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -462,8 +462,8 @@ const spells = [
       "unit": "especial"
     },
     "range": {
-      "value": 150,
-      "unit": "pés"
+      "value": 45,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -523,8 +523,8 @@ const spells = [
       "unit": "horas"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -577,8 +577,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -628,8 +628,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -685,8 +685,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -799,8 +799,8 @@ const spells = [
       "unit": "horas"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -949,8 +949,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -1111,8 +1111,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -1161,8 +1161,8 @@ const spells = [
       "unit": "ação bonus"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -1313,8 +1313,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -1371,8 +1371,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -1421,8 +1421,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": false,
@@ -1599,8 +1599,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -1815,8 +1815,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -1871,8 +1871,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -1921,8 +1921,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 90,
-      "unit": "pés"
+      "value": 27,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -1972,8 +1972,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -2020,8 +2020,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -2076,8 +2076,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 150,
-      "unit": "pés"
+      "value": 45,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -2128,8 +2128,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 150,
-      "unit": "pés"
+      "value": 45,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -2335,8 +2335,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -2466,8 +2466,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -2521,8 +2521,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -2580,8 +2580,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -2630,8 +2630,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -2724,8 +2724,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -2775,8 +2775,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 1,
-      "unit": "milhas"
+      "value": 0,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -2827,8 +2827,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 150,
-      "unit": "pés"
+      "value": 45,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -2876,8 +2876,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 10,
-      "unit": "pés"
+      "value": 3,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -2933,8 +2933,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 10,
-      "unit": "pés"
+      "value": 3,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -2999,8 +2999,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 1,
-      "unit": "milhas"
+      "value": 0,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -3055,8 +3055,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -3104,8 +3104,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -3233,8 +3233,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -3459,8 +3459,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 90,
-      "unit": "pés"
+      "value": 27,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -3589,8 +3589,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -3657,8 +3657,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 90,
-      "unit": "pés"
+      "value": 27,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -3713,8 +3713,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 90,
-      "unit": "pés"
+      "value": 27,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -3782,8 +3782,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 90,
-      "unit": "pés"
+      "value": 27,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -3845,8 +3845,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 90,
-      "unit": "pés"
+      "value": 27,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -3905,8 +3905,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -3974,8 +3974,8 @@ const spells = [
       "unit": "horas"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -4132,8 +4132,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 90,
-      "unit": "pés"
+      "value": 27,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -4289,8 +4289,8 @@ const spells = [
       "unit": "reação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": false,
@@ -4338,8 +4338,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 300,
-      "unit": "pés"
+      "value": 91,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -4570,8 +4570,8 @@ const spells = [
       "unit": "horas"
     },
     "range": {
-      "value": 10,
-      "unit": "pés"
+      "value": 3,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -4640,8 +4640,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -4702,8 +4702,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -4758,8 +4758,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 150,
-      "unit": "pés"
+      "value": 45,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -4810,8 +4810,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 150,
-      "unit": "pés"
+      "value": 45,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -4861,8 +4861,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -4948,8 +4948,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -5050,8 +5050,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 10,
-      "unit": "pés"
+      "value": 3,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -5106,8 +5106,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -5164,8 +5164,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -5269,8 +5269,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -5316,8 +5316,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -5415,8 +5415,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -5463,8 +5463,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -5515,8 +5515,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -5639,8 +5639,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -5701,8 +5701,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -6130,8 +6130,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -6246,8 +6246,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -6354,8 +6354,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -6401,8 +6401,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -6463,8 +6463,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -6524,8 +6524,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -6583,8 +6583,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -6638,8 +6638,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -6686,8 +6686,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -6792,8 +6792,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -6842,8 +6842,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 150,
-      "unit": "pés"
+      "value": 45,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -7056,8 +7056,8 @@ const spells = [
       "unit": "ação bonus"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -7160,8 +7160,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -7210,8 +7210,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 300,
-      "unit": "pés"
+      "value": 91,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -7266,8 +7266,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -7321,8 +7321,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -7376,8 +7376,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -7478,8 +7478,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -7529,8 +7529,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -7628,8 +7628,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 150,
-      "unit": "pés"
+      "value": 45,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -7682,8 +7682,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -7785,8 +7785,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 10,
-      "unit": "pés"
+      "value": 3,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -7900,8 +7900,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 90,
-      "unit": "pés"
+      "value": 27,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -7948,8 +7948,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -8121,8 +8121,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pessoal"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -8359,8 +8359,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -8410,8 +8410,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -8612,8 +8612,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": false,
@@ -8671,8 +8671,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -8732,8 +8732,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -8789,8 +8789,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -8846,8 +8846,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 90,
-      "unit": "pés"
+      "value": 27,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -8898,8 +8898,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -8992,8 +8992,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -9052,8 +9052,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 100,
-      "unit": "pés"
+      "value": 30,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -9263,8 +9263,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -9317,8 +9317,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -9428,8 +9428,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -9539,8 +9539,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -9593,8 +9593,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -10016,8 +10016,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -10073,8 +10073,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -10129,8 +10129,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 300,
-      "unit": "pés"
+      "value": 91,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -10183,8 +10183,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -10314,8 +10314,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -10415,8 +10415,8 @@ const spells = [
       "unit": "ação bonus"
     },
     "range": {
-      "value": 90,
-      "unit": "pés"
+      "value": 27,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -10517,8 +10517,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -10570,8 +10570,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -10623,8 +10623,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -10687,8 +10687,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -10832,8 +10832,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -10888,8 +10888,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -10936,8 +10936,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -11047,8 +11047,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -11099,8 +11099,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -11215,8 +11215,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -11265,8 +11265,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -11323,8 +11323,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -11378,8 +11378,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -11435,8 +11435,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -11502,8 +11502,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -11556,8 +11556,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -11655,8 +11655,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 150,
-      "unit": "pés"
+      "value": 45,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -11713,8 +11713,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 90,
-      "unit": "pés"
+      "value": 27,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -11768,8 +11768,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -11826,8 +11826,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -11922,8 +11922,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 150,
-      "unit": "pés"
+      "value": 45,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -11976,8 +11976,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -12084,8 +12084,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -12181,8 +12181,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": false,
@@ -12233,8 +12233,8 @@ const spells = [
       "unit": "ação bonus"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -12280,8 +12280,8 @@ const spells = [
       "unit": "ação bonus"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -12330,8 +12330,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -12383,8 +12383,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -12429,8 +12429,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 5,
-      "unit": "pés"
+      "value": 1,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -12479,8 +12479,8 @@ const spells = [
       "unit": "ação bonus"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -12937,8 +12937,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -13038,8 +13038,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 500,
-      "unit": "pés"
+      "value": 152,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -13094,8 +13094,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -13235,8 +13235,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 300,
-      "unit": "pés"
+      "value": 91,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -13289,8 +13289,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 10,
-      "unit": "pés"
+      "value": 3,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -13352,8 +13352,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 100,
-      "unit": "pés"
+      "value": 30,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -13478,8 +13478,8 @@ const spells = [
       "unit": "horas"
     },
     "range": {
-      "value": 10,
-      "unit": "pés"
+      "value": 3,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -13549,8 +13549,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 500,
-      "unit": "pés"
+      "value": 152,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -13909,8 +13909,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 10,
-      "unit": "pés"
+      "value": 3,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -13957,8 +13957,8 @@ const spells = [
       "unit": "reação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -14005,8 +14005,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -14057,8 +14057,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -14108,8 +14108,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -14155,8 +14155,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -14205,8 +14205,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -14252,8 +14252,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -14362,8 +14362,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 10,
-      "unit": "pés"
+      "value": 3,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -14412,8 +14412,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -15057,8 +15057,8 @@ const spells = [
       "unit": "reação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -15154,8 +15154,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -15533,8 +15533,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -15696,8 +15696,8 @@ const spells = [
       "unit": "ação bonus"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -15746,8 +15746,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -15813,8 +15813,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": false,
@@ -15865,8 +15865,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -15975,8 +15975,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -16131,8 +16131,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -16248,8 +16248,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -16357,8 +16357,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 90,
-      "unit": "pés"
+      "value": 27,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -16415,8 +16415,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -16476,8 +16476,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -16524,20 +16524,20 @@ const spells = [
     "type": "1º nível de encantamento",
     "isRitual": false,
     "classes": [
-      "bardo",
+      "bardo"
     ],
     "casting": {
       "time": 1,
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
       "isSomatic": false,
-      "isMaterial": false,
+      "isMaterial": false
     },
     "duration": {
       "value": 0,
@@ -16573,8 +16573,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -16634,8 +16634,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -16697,8 +16697,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -16767,8 +16767,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 10,
-      "unit": "pés"
+      "value": 3,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -16912,8 +16912,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 10,
-      "unit": "pés"
+      "value": 3,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -17030,8 +17030,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 150,
-      "unit": "pés"
+      "value": 45,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -17082,8 +17082,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 300,
-      "unit": "pés"
+      "value": 91,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -17133,8 +17133,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 90,
-      "unit": "pés"
+      "value": 27,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -17189,8 +17189,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 500,
-      "unit": "pés"
+      "value": 152,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -17264,8 +17264,8 @@ const spells = [
       "unit": "minutos"
     },
     "range": {
-      "value": 300,
-      "unit": "pés"
+      "value": 91,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -17316,8 +17316,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 120,
-      "unit": "pés"
+      "value": 36,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -17579,8 +17579,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 30,
-      "unit": "pés"
+      "value": 9,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -18087,8 +18087,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,
@@ -18139,8 +18139,8 @@ const spells = [
       "unit": "ação"
     },
     "range": {
-      "value": 60,
-      "unit": "pés"
+      "value": 18,
+      "unit": "metros"
     },
     "components": {
       "isVerbal": true,

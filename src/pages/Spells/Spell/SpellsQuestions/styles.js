@@ -16,7 +16,7 @@ export const SpellsQuestionsWrapper = styled.legend`
       border: 2px solid var(--blueDark);
       display: inline-flex;
       font-weight: bold;
-      color: #efff;
+      color: #fff;
       justify-content: center;
       width: 6rem;
       border-radius: 5px;
