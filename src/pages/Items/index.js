@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { GlobalContext } from "../../contexts/Global";
 import { ItemsContainer, Table, TableRow, TableHeader, TableCell } from "./styles";
 
@@ -9,7 +9,15 @@ import BackpackIcon from "../../assets/icons/backpack.png";
 
 export default function Items() {
   const { savedItems, isFilteringSpells } = useContext(GlobalContext);
-  
+
+  // Agrupando as armas por tipo
+  const groupedWeapons = Weapons.reduce((acc, weapon) => {
+    if (!acc[weapon.type]) {
+      acc[weapon.type] = [];
+    }
+    acc[weapon.type].push(weapon);
+    return acc;
+  }, {});
 
   return (
     <ItemsContainer>
@@ -52,18 +60,30 @@ export default function Items() {
           </TableRow>
         </thead>
         <tbody>
-          {Weapons.map((weapon, index) => (
-            <TableRow key={index}>
-              <TableCell>{weapon.label}</TableCell>
-              <TableCell>{weapon.price}</TableCell>
-              <TableCell>{weapon.damage}</TableCell>
-              <TableCell>{weapon.type}</TableCell>
-              <TableCell>{weapon.weight}</TableCell>
-              <TableCell>{weapon.properties || "N/A"}</TableCell>
-            </TableRow>
+          {Object.keys(groupedWeapons).map((weaponType, index) => (
+            <React.Fragment key={index}>
+              {/* Linha indicando o tipo de arma */}
+              <TableRow>
+                <TableCell colSpan="6" style={{ textAlign: "center", fontWeight: "bold" }}>
+                  {weaponType}
+                </TableCell>
+              </TableRow>
+              {/* Listando as armas daquele tipo */}
+              {groupedWeapons[weaponType].map((weapon, weaponIndex) => (
+                <TableRow key={weaponIndex}>
+                  <TableCell>{weapon.label}</TableCell>
+                  <TableCell>{weapon.price}</TableCell>
+                  <TableCell>{weapon.damage}</TableCell>
+                  <TableCell>{weapon.type}</TableCell>
+                  <TableCell>{weapon.weight}</TableCell>
+                  <TableCell>{weapon.properties || "N/A"}</TableCell>
+                </TableRow>
+              ))}
+            </React.Fragment>
           ))}
         </tbody>
       </Table>
+
       <Grimoire
         className="animationUp"
         src={BackpackIcon}

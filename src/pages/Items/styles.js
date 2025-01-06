@@ -15,6 +15,10 @@ export const Table = styled.table`
   font-size: 1rem;
   text-align: left;
   border: 1px solid #ddd;
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const TableRow = styled.tr`
@@ -41,7 +45,7 @@ export const TableCell = styled.td`
   /* border-bottom: 1px solid #ddd; */
 
   @media (max-width: 800px) {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     padding: 0.25rem;
   }
 `;
