@@ -67,7 +67,7 @@ export default function Items() {
       <Grimoire
         className="animationUp"
         src={BackpackIcon}
-        onClick={() => {}}
+        onClick={() => alert("em construção :)")}
       />
     </ItemsContainer>
   );
