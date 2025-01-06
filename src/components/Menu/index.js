@@ -11,6 +11,8 @@ export default function Menu() {
       </Link>
       <nav>
         <Link to="/spells">Magias</Link>
+        <Link to="/items">Items</Link>
+        {/* <Link to="/inventory">Inventário</Link> */}
       </nav>
     </MenuWrapper>
   );

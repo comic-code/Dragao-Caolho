@@ -5,6 +5,7 @@ export const GlobalContext = createContext({});
 
 export default function GlobalProvider({ children }) {
   const [savedSpells, setSavedSpells] = useState([]);
+  const [savedItems, setSavedItems] = useState([]);
   const [isFilteringSpells, setIsFilteringSpells] = useState(false);
 
   useEffect(() => {
@@ -14,9 +15,19 @@ export default function GlobalProvider({ children }) {
   useEffect(() => {
     const spells = localStorage.getItem('spells');
     spells && setSavedSpells(JSON.parse(spells));
+
+    
+    const items = localStorage.getItem('items');
+    items && setSavedItems(JSON.parse(items));
   }, []);
 
-  return <GlobalContext.Provider value={{ savedSpells, setSavedSpells, isFilteringSpells, setIsFilteringSpells }}>
-            {children}
-          </GlobalContext.Provider>;
+  return (
+    <GlobalContext.Provider value={{ 
+      savedSpells, setSavedSpells, 
+      isFilteringSpells, setIsFilteringSpells,
+      savedItems, setSavedItems
+    }}>
+      {children}
+    </GlobalContext.Provider>
+  ) 
 }

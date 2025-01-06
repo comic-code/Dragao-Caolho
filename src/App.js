@@ -5,6 +5,7 @@ import GlobalProvider from './contexts/Global';
 import Home from './pages/Home';
 import GlobalStyle from './styles/globalStyles';
 import Loading from './components/Loading';
+import Items from './pages/Items';
 
 const Spells = lazy(() => import('./pages/Spells'));
 
@@ -16,6 +17,7 @@ export default function App() {
         <Menu />
         <Routes>
           <Route index element={<Home />} />
+          <Route path="items" element={<Items />} />
           <Route path="spells" element={
             <Suspense fallback={<Loading />}>
               <Spells />

@@ -18,6 +18,7 @@ export const MenuWrapper = styled.header`
       font-weight: bold;
       color: var(--brown);
       transition: 0.3s;
+      margin-left: 2rem;
 
       &:hover {
         color: var(--white);
