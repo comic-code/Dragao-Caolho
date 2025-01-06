@@ -4,9 +4,12 @@ import { ItemsContainer, Table, TableRow, TableHeader, TableCell } from "./style
 
 import Armors from './assets/armors';
 import Weapons from './assets/weapons';
+import { Grimoire } from "../Spells/styled";
+import BackpackIcon from "../../assets/icons/backpack.png";
 
 export default function Items() {
   const { savedItems, isFilteringSpells } = useContext(GlobalContext);
+  
 
   return (
     <ItemsContainer>
@@ -61,6 +64,11 @@ export default function Items() {
           ))}
         </tbody>
       </Table>
+      <Grimoire
+        className="animationUp"
+        src={BackpackIcon}
+        onClick={() => {}}
+      />
     </ItemsContainer>
   );
 }

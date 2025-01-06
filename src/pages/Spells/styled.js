@@ -37,9 +37,9 @@ export const Grimoire = styled.img`
   transition: 0.3s;
   bottom: 0.5rem;
   right: 0.5rem;
-  background-color: var(--pink);
-  border: 2px solid var(--blueDark);
-  border-radius: 1rem;
+  background-color: var(--blueDark);
+  border: 2px solid var(--black);
+  border-radius: 0.75rem;
   padding: 0.35rem;
   max-width: 5rem;
   max-height: 5rem;
