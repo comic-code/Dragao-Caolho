@@ -54,7 +54,7 @@ export default function Items() {
             <TableHeader>Nome</TableHeader>
             <TableHeader>Preço</TableHeader>
             <TableHeader>Dano</TableHeader>
-            <TableHeader>Tipo</TableHeader>
+            {/* <TableHeader>Tipo</TableHeader> */}
             <TableHeader>Peso</TableHeader>
             <TableHeader>Propriedades</TableHeader>
           </TableRow>
@@ -74,7 +74,7 @@ export default function Items() {
                   <TableCell>{weapon.label}</TableCell>
                   <TableCell>{weapon.price}</TableCell>
                   <TableCell>{weapon.damage}</TableCell>
-                  <TableCell>{weapon.type}</TableCell>
+                  {/* <TableCell>{weapon.type}</TableCell> */}
                   <TableCell>{weapon.weight}</TableCell>
                   <TableCell>{weapon.properties || "N/A"}</TableCell>
                 </TableRow>

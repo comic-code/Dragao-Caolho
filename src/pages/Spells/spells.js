@@ -18173,6 +18173,175 @@ const spells = [
       "reference": "Documento De Referência De Sistema",
       "page": "193"
     }
+  },
+  {
+    "name": "Bruxaria",
+    "originalName": "Hex",
+    "level": 1,
+    "school": "encantamento",
+    "type": "2º nível de encantamento",
+    "isRitual": false,
+    "classes": [
+      "bruxo",
+    ],
+    "casting": {
+      "time": 1,
+      "unit": "ação bônus"
+    },
+    "range": {
+      "value": 27,
+      "unit": "metros"
+    },
+    "components": {
+      "isVerbal": true,
+      "isSomatic": true,
+      "isMaterial": true,
+      "material": {
+        "description": "o olho petrificado de um tritão",
+        "cost": null,
+        "isConsumed": false
+      }
+    },
+    "duration": {
+      "value": 1,
+      "unit": "hora",
+      "concentration": true
+    },
+    "body": {
+      "description": [
+        {
+          "type": "default",
+          "description": "Você coloca uma maldição em uma criatura que você possa ver, dentro do alcance. Até a magia acabar, você causa 1d6 de dano necrótico extra no alvo sempre que atingi-lo com um ataque. Além disso, escolha uma habilidade quando você conjurar a magia. O alvo tem desvantagem em testes de habilidade feitos com a habilidade escolhida."
+        },
+        {
+          "type": "default",
+          "description": "Se o alvo cair a 0 pontos de vida antes da magia acabar, você pode usar uma ação bônus, em um turno subsequente, para amaldiçoar outra criatura."
+        },
+        {
+          "type": "default",
+          "description": "Uma magia remover maldição conjurada no alvo acaba com a magia prematuramente."
+        },
+       
+      ]
+    },
+    "higherLevels": "Quando você conjurar essa magia usando um espaço de magia de 3° ou 4° nível, você poderá manter sua concentração na magia por até 8 horas. Quando você usar um espaço de magia de 5° nível ou superior, você poderá manter sua concentração na magia por até 24 horas.",
+    "font": {
+      "reference": "Documento De Referência De Sistema",
+      "page": "233"
+    }
+  },
+  {
+    "name": "Força Fantasmagórica",
+    "originalName": "Phantasmal Force",
+    "level": 2,
+    "school": "ilusão",
+    "type": "2º nível de ilusão",
+    "isRitual": false,
+    "classes": [
+      "Bardo",
+      "Feiticeiro",
+      "Mago",
+    ],
+    "casting": {
+      "time": 1,
+      "unit": "ação"
+    },
+    "range": {
+      "value": 27,
+      "unit": "metros"
+    },
+    "components": {
+      "isVerbal": true,
+      "isSomatic": true,
+      "isMaterial": true,
+      "material": {
+        "description": "um pouco de lã",
+        "cost": null,
+        "isConsumed": false
+      }
+    },
+    "duration": {
+      "value": 1,
+      "unit": "minuto",
+      "concentration": true
+    },
+    "body": {
+      "description": [
+        {
+          "type": "default",
+          "description": "Você cria uma ilusão que se enraíza na mente de uma criatura à sua vista e dentro do alcance da magia. O alvo deve fazer uma salvaguarda de Inteligência. Se falhar, você cria um objeto, criatura ou outro fenômeno fantasmagórico visível, à sua escolha, que não seja maior do que um cubo de 3 metros [10-foot cube] e que é perceptível apenas pelo alvo, enquanto a magia durar. Essa magia não tem efeito sobre mortos-vivos ou constructos."
+        },
+        {
+          "type": "default",
+          "description": "O fantasma pode incluir som, temperatura, e outros estímulos, também apenas evidentes para a criatura."
+        },
+        {
+          "type": "default",
+          "description": "O alvo pode usar uma reação para examinar o fantasma com um teste de Inteligência (Investigação) contra a CD para evitar sua magia. Se o teste for bem-sucedido, o alvo percebe que o fantasma é uma ilusão, e a magia se encerra."
+        },
+        {
+          "type": "default",
+          "description": "Enquanto a magia durar, o alvo trata o fantasma como se fosse real. O alvo racionaliza quaisquer resultados ilógicos de interações com o fantasma. Por exemplo, um alvo que esteja tentando atravessar uma ponte fantasma sobre um abismo cai assim que pisa na ponte. Caso sobreviva à queda, o alvo ainda acredita na existência da ponte, e tenta achar alguma explicação para a própria queda - foi empurrado, escorregou, ou um forte vento o derrubou."
+        },
+        {
+          "type": "default",
+          "description": "Um alvo afetado está tão convencido da veracidade do fantasma que pode até mesmo sofrer dano da ilusão. Um fantasma criado na forma de uma criatura pode atacar o alvo. Da mesma forma, um fantasma criado na forma de chamas, poça de ácido ou lava pode queimar o alvo. A cada rodada, no seu turno, o fantasma causa 1d6 pontos de dano psíquico no alvo se este estiver na área ou a até 1,5 metros [5 ft.] do fantasma, desde que a ilusão seja de uma criatura ou de um perigo que poderia causar dano de alguma forma lógica, atacando, por exemplo. O alvo percebe o dano como sendo de um tipo apropriado à ilusão."
+        },
+       
+      ]
+    },
+    "font": {
+      "reference": "Documento De Referência De Sistema",
+      "page": "244"
+    }
+  },
+  {
+    "name": "Armadura de Agathys",
+    "originalName": "Agathys Armor",
+    "level": 1,
+    "school": "abjuração ",
+    "type": "1º nível de abjuração ",
+    "isRitual": false,
+    "classes": [
+      "Bruxo",
+    ],
+    "casting": {
+      "time": 1,
+      "unit": "ação"
+    },
+    "range": {
+      "value": null,
+      "unit": "pessoal"
+    },
+    "components": {
+      "isVerbal": true,
+      "isSomatic": true,
+      "isMaterial": true,
+      "material": {
+        "description": "um copo de água.",
+        "cost": null,
+        "isConsumed": false
+      }
+    },
+    "duration": {
+      "value": 1,
+      "unit": "hora",
+      "concentration": false
+    },
+    "body": {
+      "description": [
+        {
+          "type": "default",
+          "description": "Uma força magica protetora envolve você, manifestando- se como um frio espectral que cobre você e seu equipamento. Você ganha 5 pontos de vida temporários pela duração. Se uma criatura atingir você com um ataque corpo-a-corpo enquanto estiver com esses pontos de vida, a criatura sofrerá 5 de dano de frio."
+        },
+       
+      ]
+    },
+    "higherLevels": "Quando você conjurar essa magia usando um espaço de magia de 2° nível ou superior, tanto os pontos de vida temporários quanto o dano de frio aumentam em 5 para cada nível do espaço acima do 1°.",
+    "font": {
+      "reference": "Documento De Referência De Sistema",
+      "page": "244"
+    }
   }
 ]
 
