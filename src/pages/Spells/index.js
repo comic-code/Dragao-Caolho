@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 import { GlobalContext } from '../../contexts/Global';
 import Spell from './Spell';
 import SpellList from './spells';
-import { Grimoire, SpellContextBar, SpellControls, SpellsContainer } from './styled';
-import GrimoireIcon from '../../assets/icons/favorite.png';
-import OpenGrimoireIcon from '../../assets/icons/openGrimoire.png';
+import { SpellContextBar, SpellControls, SpellsContainer } from './styled';
 import SkullIcon from '../../assets/icons/skull.png';
 import SpellFilters from './SpellFilters';
 import SpellsQuestions from './Spell/SpellsQuestions';
@@ -14,11 +12,9 @@ import { EMPTY_SPELL_FILTERS, filterSpells, hasActiveSpellFilters } from '../../
 
 export default function Spells() {
   const [filters, setFilters] = useState({ ...EMPTY_SPELL_FILTERS });
-  const [justSavedSpells, setJustSavedSpells] = useState(false);
-  const { savedSpells, characters, activeCharacterId, setActiveCharacterId } = useContext(GlobalContext);
+  const { characters, activeCharacterId, setActiveCharacterId } = useContext(GlobalContext);
   const activeCharacter = characters.find(character => character.id === activeCharacterId) || characters[0] || null;
-  const spellSource = justSavedSpells ? savedSpells : SpellList;
-  const visibleSpells = useMemo(() => filterSpells(spellSource, filters), [spellSource, filters]);
+  const visibleSpells = useMemo(() => filterSpells(SpellList, filters), [filters]);
   const hasFilters = hasActiveSpellFilters(filters);
 
   function updateFilter(field, value) {
@@ -52,28 +48,14 @@ export default function Spells() {
             )
             : <p>Crie um personagem para salvar magias no grimório. <Link to="/characters">Criar personagem</Link></p>
           }
-          <span className="resultCount" role="status">{visibleSpells.length} {visibleSpells.length === 1 ? 'magia' : 'magias'}{justSavedSpells ? ' salvas' : ' encontradas'}</span>
+          <span className="resultCount" role="status">{visibleSpells.length} {visibleSpells.length === 1 ? 'magia encontrada' : 'magias encontradas'}</span>
         </SpellContextBar>
       </SpellControls>
 
-      {justSavedSpells && savedSpells.length === 0
-        ? renderEmpty('Sem magias salvas')
-        : visibleSpells.length > 0
-          ? visibleSpells.map(spell => <Spell key={spell.name} spell={spell} />)
-          : renderEmpty(hasFilters
-            ? (justSavedSpells ? 'Nenhuma magia salva combina com os filtros' : 'Magia não encontrada')
-            : 'Sem magias para mostrar')
+      {visibleSpells.length > 0
+        ? visibleSpells.map(spell => <Spell key={spell.name} spell={spell} />)
+        : renderEmpty(hasFilters ? 'Magia não encontrada' : 'Sem magias para mostrar')
       }
-
-      <Grimoire
-        type="button"
-        className="animationUp"
-        onClick={() => setJustSavedSpells(current => !current)}
-        aria-label={justSavedSpells ? 'Mostrar todas as magias' : 'Mostrar magias salvas'}
-        aria-pressed={justSavedSpells}
-      >
-        <img src={justSavedSpells ? OpenGrimoireIcon : GrimoireIcon} alt="" />
-      </Grimoire>
     </SpellsContainer>
   );
 }

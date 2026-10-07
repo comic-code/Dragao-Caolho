@@ -12,7 +12,7 @@ export const SpellHeaderWrapper = styled.header`
   .spellTitleRow {
     align-items: flex-start;
     gap: 0.5rem;
-    padding-right: 7rem;
+    padding-right: 4.5rem;
   }
 
   .spellTitle { min-width: 0; }
@@ -58,7 +58,6 @@ export const SpellHeaderWrapper = styled.header`
   }
 
   .spellActions button img { width: 1.8rem; height: 1.8rem; object-fit: contain; }
-  .spellActions button svg { width: 1.5rem; height: 1.5rem; }
   .spellActions button:disabled { cursor: default; opacity: 0.55; }
   .detailLink svg { width: 1.5rem; height: 1.5rem; }
 

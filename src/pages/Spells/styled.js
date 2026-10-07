@@ -6,7 +6,7 @@ export const SpellsContainer = styled.main`
   justify-content: center;
   align-items: flex-start;
   position: relative;
-  padding: 0.5rem 0 6rem;
+  padding: 0.5rem 0 1rem;
 
   .noSpells {
     margin: 3rem 1rem;
@@ -49,23 +49,4 @@ export const SpellContextBar = styled.section`
   select { width: 100%; min-width: 0; }
   p, .resultCount { margin: 0; color: #5a5b63; font-size: 0.88rem; }
   a { color: #70502b; font-weight: 700; text-decoration: underline; }
-`;
-
-export const Grimoire = styled.button`
-  position: fixed;
-  z-index: 5;
-  right: max(0.75rem, env(safe-area-inset-right));
-  bottom: max(0.75rem, env(safe-area-inset-bottom));
-  width: 4.25rem;
-  height: 4.25rem;
-  display: grid;
-  place-items: center;
-  border: 2px solid var(--black);
-  border-radius: 0.75rem;
-  background-color: var(--blueDark);
-  transition: transform 0.2s, filter 0.2s;
-
-  img { width: 3rem; height: 3rem; object-fit: contain; }
-  &:hover { filter: brightness(1.15); transform: translateY(-2px); }
-  &:focus-visible { outline: 3px solid var(--brown); outline-offset: 3px; }
 `;

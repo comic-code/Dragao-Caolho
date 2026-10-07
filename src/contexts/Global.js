@@ -33,11 +33,9 @@ function persist(key, value) {
 }
 
 export default function GlobalProvider({ children }) {
-  const [savedSpells, setSavedSpells] = useState(() => readStoredArray('spells'));
   const [characters, setCharacters] = useState(() => readStoredArray(CHARACTERS_KEY, normalizeCharacter));
   const [activeCharacterId, setActiveCharacterId] = useState(readStoredId);
 
-  useEffect(() => persist('spells', savedSpells), [savedSpells]);
   useEffect(() => persist(CHARACTERS_KEY, characters), [characters]);
   useEffect(() => {
     try {
@@ -70,8 +68,6 @@ export default function GlobalProvider({ children }) {
 
   return (
     <GlobalContext.Provider value={{
-      savedSpells,
-      setSavedSpells,
       characters,
       activeCharacterId,
       setActiveCharacterId,
