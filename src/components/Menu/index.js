@@ -12,7 +12,7 @@ export default function Menu() {
       <nav aria-label="Navegação principal">
         <NavLink to="/spells">Magias</NavLink>
         <NavLink to="/characters">Personagens</NavLink>
-        <NavLink to="/items">Itens</NavLink>
+        <NavLink to="/items">Equipamento</NavLink>
       </nav>
     </MenuWrapper>
   );

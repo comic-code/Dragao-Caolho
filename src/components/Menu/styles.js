@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const MenuWrapper = styled.header`
+  position: sticky;
+  top: 0;
+  z-index: 100;
   min-height: 4.5rem;
   display: flex;
   align-items: center;

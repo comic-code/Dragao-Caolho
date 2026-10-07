@@ -1,8 +1,10 @@
 import { useContext, useState } from 'react';
 import { GlobalContext } from '../../contexts/Global';
+import CharacterClassIcon from '../../components/CharacterClassIcon';
 import CharacterForm from './CharacterForm';
 import Spellbook from './Spellbook';
 import Inventory from './Inventory';
+import { CHARACTER_CLASSES } from '../../utils/characterUtils';
 import { CharacterCard, CharacterDetailHeader, CharacterList, CharacterWorkspace, CharactersPage, PageHeader, Panel } from './styles';
 
 export default function Characters() {
@@ -78,9 +80,12 @@ export default function Characters() {
                     return (
                       <CharacterCard key={character.id}>
                         <div className="characterCardTitle">
-                          <div>
-                            <h2>{character.name || 'Personagem sem nome'}</h2>
-                            <p>{character.className}{character.subclass ? ` · ${character.subclass}` : ''}</p>
+                          <div className="characterCardIdentity">
+                            <CharacterClassIcon characterClass={character.className} size="3rem" />
+                            <div className="characterCardCopy">
+                              <h2>{character.name || 'Personagem sem nome'}</h2>
+                              <p>{character.className}{character.subclass ? ` · ${character.subclass}` : ''}</p>
+                            </div>
                           </div>
                           <span className="levelBadge">Nível {character.level}</span>
                         </div>
@@ -113,13 +118,16 @@ export default function Characters() {
         : (
           <>
             <CharacterDetailHeader>
-              <div className="detailTitle">
-                <button className="backButton" type="button" aria-label="Voltar para personagens" onClick={showCharacterList}>
-                  ← Personagens
-                </button>
-                <span className="eyebrow">FICHA DO AVENTUREIRO</span>
-                <h1>{selectedCharacter.name || 'Personagem sem nome'}</h1>
-                <p>{selectedCharacter.className}{selectedCharacter.subclass ? ` · ${selectedCharacter.subclass}` : ''} · Nível {selectedCharacter.level}</p>
+              <div className="detailIdentity">
+                <CharacterClassIcon characterClass={selectedCharacter.className} size="4rem" />
+                <div className="detailTitle">
+                  <button className="backButton" type="button" aria-label="Voltar para personagens" onClick={showCharacterList}>
+                    ← Personagens
+                  </button>
+                  <span className="eyebrow">FICHA DO AVENTUREIRO</span>
+                  <h1>{selectedCharacter.name || 'Personagem sem nome'}</h1>
+                  <p>{selectedCharacter.className}{selectedCharacter.subclass ? ` · ${selectedCharacter.subclass}` : ''} · Nível {selectedCharacter.level}</p>
+                </div>
               </div>
               <div className="detailActions">
                 <button className="editCharacter" type="button" onClick={() => setShowProfileEditor(current => !current)}>
@@ -143,9 +151,9 @@ export default function Characters() {
                     <input maxLength={50} value={selectedCharacter.name} onChange={event => updateField('name', event.target.value)} />
                   </label>
                   <label>
-                    Classe conjuradora
+                    Classe
                     <select value={selectedCharacter.className} onChange={event => updateField('className', event.target.value)}>
-                      {['bardo', 'bruxo', 'clérigo', 'druida', 'feiticeiro', 'mago', 'paladino', 'patrulheiro'].map(className => (
+                      {CHARACTER_CLASSES.map(className => (
                         <option key={className} value={className}>{className}</option>
                       ))}
                     </select>

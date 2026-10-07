@@ -9,6 +9,22 @@ export const SPELLCASTING_CLASSES = [
   'patrulheiro',
 ];
 
+export const CHARACTER_CLASSES = [
+  'artífice',
+  'bárbaro',
+  'bardo',
+  'bruxo',
+  'clérigo',
+  'druida',
+  'feiticeiro',
+  'guerreiro',
+  'ladino',
+  'mago',
+  'monge',
+  'paladino',
+  'patrulheiro',
+];
+
 export const COIN_TYPES = [
   { key: 'pc', label: 'Cobre (PC)', valueInGold: 0.01 },
   { key: 'pp', label: 'Prata (PP)', valueInGold: 0.1 },

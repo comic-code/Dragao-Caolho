@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SPELLCASTING_CLASSES } from '../../utils/characterUtils';
+import { CHARACTER_CLASSES, SPELLCASTING_CLASSES } from '../../utils/characterUtils';
 import { FormPanel } from './styles';
 
 const initialForm = { name: '', className: SPELLCASTING_CLASSES[0], subclass: '', level: 1 };
@@ -27,9 +27,9 @@ export default function CharacterForm({ onCreate, onCancel }) {
       </label>
       <div className="formRow">
         <label>
-          Classe conjuradora
+          Classe
           <select value={form.className} onChange={event => update('className', event.target.value)}>
-            {SPELLCASTING_CLASSES.map(className => <option key={className} value={className}>{className}</option>)}
+            {CHARACTER_CLASSES.map(className => <option key={className} value={className}>{className}</option>)}
           </select>
         </label>
         <label>

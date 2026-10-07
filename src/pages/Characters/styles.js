@@ -55,7 +55,8 @@ export const CharacterCard = styled.article`
   transition: transform 0.18s, box-shadow 0.18s;
 
   .characterCardTitle { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.75rem; }
-  .characterCardTitle > div { min-width: 0; }
+  .characterCardIdentity { display: flex; align-items: center; gap: 0.65rem; min-width: 0; }
+  .characterCardCopy { min-width: 0; }
   h2 { margin-bottom: 0.25rem; color: var(--blueDark); font-size: 1.2rem; overflow-wrap: anywhere; }
   p { color: #5a5b63; font-size: 0.9rem; overflow-wrap: anywhere; }
   .levelBadge { flex: 0 0 auto; padding: 0.3rem 0.55rem; border-radius: 999px; background: #eee4d2; color: var(--blueDark); font-size: 0.75rem; font-weight: 700; }
@@ -75,6 +76,7 @@ export const CharacterDetailHeader = styled.header`
   gap: 1rem;
   margin-bottom: 1.25rem;
 
+  .detailIdentity { display: flex; flex: 1 1 auto; align-items: center; gap: 1rem; min-width: 0; }
   .detailTitle { display: grid; gap: 0.25rem; min-width: 0; }
   .backButton { justify-self: start; color: #70502b; font-weight: 700; text-decoration: underline; }
   .eyebrow { color: #70502b; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.14em; }
@@ -105,10 +107,15 @@ export const Panel = styled.section`
   box-shadow: 0 5px 16px rgba(40, 42, 54, 0.08);
 
   h2, h3 { color: var(--blueDark); }
-  .panelHeading { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
+  .panelHeading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
   .panelHeading h2, .panelHeading h3 { margin-top: 0.15rem; }
   .eyebrow { color: #70502b; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; }
   .countBadge { padding: 0.3rem 0.55rem; border-radius: 999px; background: #eee4d2; color: var(--blueDark); font-size: 0.75rem; font-weight: 700; text-align: center; }
+  .spellbookHeadingActions { display: flex; align-items: center; gap: 0.5rem; }
+  .openGrimoireButton { width: 2.4rem; height: 2.4rem; flex: 0 0 2.4rem; display: grid; place-items: center; border: 1px solid #ded7c8; border-radius: 0.45rem; background: #f1eee6; }
+  .openGrimoireButton img { display: block; width: 1.8rem; height: 1.8rem; object-fit: contain; }
+  .openGrimoireButton:hover, .openGrimoireButton:focus-visible { background: #eee4d2; }
+  .openGrimoireButton:focus-visible { outline: 2px solid var(--brown); outline-offset: 2px; }
   .muted, .emptyMessage { color: #696a70; font-size: 0.9rem; line-height: 1.5; }
   .emptyMessage { padding: 0.8rem; border-radius: 0.45rem; background: #f1eee6; text-align: center; }
 

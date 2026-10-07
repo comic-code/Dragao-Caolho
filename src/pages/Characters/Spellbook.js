@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SpellList from '../Spells/spells';
 import { normalizeText, slugify } from '../../utils/spellUtils';
+import OpenGrimoireIcon from '../../assets/icons/openGrimoire.png';
 import { Panel } from './styles';
 
 export default function Spellbook({ character, onUpdate }) {
@@ -50,7 +51,17 @@ export default function Spellbook({ character, onUpdate }) {
           <span className="eyebrow">GRIMÓRIO PESSOAL</span>
           <h2>Magias</h2>
         </div>
-        <span className="countBadge">{entries.length} conhecidas · {preparedCount} preparadas</span>
+        <div className="spellbookHeadingActions">
+          <span className="countBadge">{entries.length} conhecidas · {preparedCount} preparadas</span>
+          <Link
+            className="openGrimoireButton"
+            to={`/spells?view=grimoire&characterId=${encodeURIComponent(character.id)}`}
+            aria-label={`Abrir grimório de ${character.name || 'personagem sem nome'}`}
+            title={`Abrir grimório de ${character.name || 'personagem sem nome'}`}
+          >
+            <img src={OpenGrimoireIcon} alt="" />
+          </Link>
+        </div>
       </div>
 
       <label className="searchLabel">

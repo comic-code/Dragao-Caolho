@@ -23,6 +23,26 @@ export const SpellsContainer = styled.main`
 
     img { width: 2.5rem; height: auto; }
   }
+
+  .emptyGrimoireLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    padding: 0.65rem 0.9rem;
+    border: 1px solid var(--blueDark);
+    border-radius: 0.45rem;
+    background: var(--brown);
+    color: var(--white);
+    font-weight: 700;
+  }
+
+  .unavailableSpellNote {
+    width: min(100% - 1rem, 1040px);
+    margin: 0.5rem auto 1rem;
+    color: #5a5b63;
+    text-align: center;
+  }
 `;
 
 export const SpellControls = styled.div`
@@ -49,4 +69,22 @@ export const SpellContextBar = styled.section`
   select { width: 100%; min-width: 0; }
   p, .resultCount { margin: 0; color: #5a5b63; font-size: 0.88rem; }
   a { color: #70502b; font-weight: 700; text-decoration: underline; }
+
+  &.grimoireView {
+    align-items: center;
+
+    .grimoireIdentity { display: flex; align-items: center; gap: 0.75rem; min-width: 0; }
+    .grimoireIdentity > div { min-width: 0; }
+    .eyebrow { color: #70502b; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; }
+    h1 { margin: 0.1rem 0; color: var(--blueDark); font-size: clamp(1.15rem, 2.4vw, 1.65rem); overflow-wrap: anywhere; }
+    p { margin: 0; color: #5a5b63; font-size: 0.85rem; }
+    .catalogBackLink { display: inline-flex; flex: 0 0 auto; align-items: center; justify-content: center; padding: 0.6rem 0.8rem; border: 1px solid var(--blueDark); border-radius: 0.45rem; background: #f1eee6; color: var(--blueDark); font-weight: 700; text-align: center; }
+    .catalogBackLink:hover, .catalogBackLink:focus-visible { background: #eee4d2; }
+    .catalogBackLink:focus-visible { outline: 2px solid var(--brown); outline-offset: 2px; }
+  }
+
+  @media (max-width: 480px) {
+    &.grimoireView { align-items: flex-start; }
+    &.grimoireView .catalogBackLink { flex-basis: 100%; }
+  }
 `;

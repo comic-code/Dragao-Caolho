@@ -2,6 +2,7 @@ import '@testing-library/jest-dom';
 import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import GlobalProvider from '../../contexts/Global';
+import { CHARACTER_CLASSES } from '../../utils/characterUtils';
 import Characters from './index';
 
 const CHARACTERS_KEY = 'dragao-caolho.characters.v1';
@@ -36,6 +37,8 @@ describe('Characters page', () => {
     expect(screen.queryByRole('heading', { name: 'Equipamentos' })).not.toBeInTheDocument();
 
     fireEvent.click(screen.getByRole('button', { name: 'Abrir ficha de Mira' }));
+    const openGrimoire = screen.getByRole('link', { name: 'Abrir grimório de Mira' });
+    expect(openGrimoire).toHaveAttribute('href', '/spells?view=grimoire&characterId=mira');
     expect(screen.getByRole('heading', { name: 'Mira' })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Magias' })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Equipamentos' })).toBeInTheDocument();
@@ -53,7 +56,7 @@ describe('Characters page', () => {
     const form = screen.getByRole('heading', { name: 'Novo personagem' }).closest('form');
 
     fireEvent.change(within(form).getByLabelText('Nome'), { target: { value: 'Aelthar' } });
-    fireEvent.change(within(form).getByLabelText('Classe conjuradora'), { target: { value: 'mago' } });
+    fireEvent.change(within(form).getByLabelText('Classe'), { target: { value: 'mago' } });
     fireEvent.change(within(form).getByLabelText('Nível'), { target: { value: '3' } });
     fireEvent.change(within(form).getByLabelText('Subclasse (opcional)'), { target: { value: 'Evocação' } });
     fireEvent.click(within(form).getByRole('button', { name: 'Criar personagem' }));
@@ -68,7 +71,7 @@ describe('Characters page', () => {
     expect(screen.getByRole('heading', { name: 'Equipamentos' })).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: 'Editar ficha' }));
     expect(screen.getByLabelText('Nome')).toHaveValue('Aelthar');
-    expect(screen.getByLabelText('Classe conjuradora')).toHaveValue('mago');
+    expect(screen.getByLabelText('Classe')).toHaveValue('mago');
 
     const spellSearch = screen.getByLabelText('Adicionar magia por nome');
     fireEvent.change(spellSearch, { target: { value: 'Ajuda' } });
@@ -115,5 +118,46 @@ describe('Characters page', () => {
     expect(screen.getByLabelText('Quantidade de Adaga')).toHaveValue(1);
     fireEvent.click(screen.getByRole('button', { name: 'Editar ficha' }));
     expect(screen.getByLabelText('Nome')).toHaveValue('Aelthar');
+  });
+
+  test('offers every class and lets a non-spellcasting character use only the inventory', async () => {
+    renderCharacters();
+
+    fireEvent.click(screen.getByRole('button', { name: '+ Novo personagem' }));
+    const form = screen.getByRole('heading', { name: 'Novo personagem' }).closest('form');
+    const classSelect = within(form).getByLabelText('Classe');
+
+    expect(CHARACTER_CLASSES).toEqual([
+      'artífice', 'bárbaro', 'bardo', 'bruxo', 'clérigo', 'druida', 'feiticeiro',
+      'guerreiro', 'ladino', 'mago', 'monge', 'paladino', 'patrulheiro',
+    ]);
+    expect(within(classSelect).getAllByRole('option').map(option => option.value)).toEqual(CHARACTER_CLASSES);
+
+    fireEvent.change(within(form).getByLabelText('Nome'), { target: { value: 'Brakka' } });
+    fireEvent.change(classSelect, { target: { value: 'bárbaro' } });
+    fireEvent.click(within(form).getByRole('button', { name: 'Criar personagem' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Abrir ficha de Brakka' }));
+
+    expect(screen.getByRole('heading', { name: 'Equipamentos' })).toBeInTheDocument();
+    fireEvent.change(screen.getByLabelText('Buscar item'), { target: { value: 'Adaga' } });
+    expect(screen.getByLabelText('Do catálogo')).toHaveValue('arma:Adaga');
+    fireEvent.click(screen.getByRole('button', { name: 'Adicionar', exact: true }));
+    expect(screen.getByLabelText('Quantidade de Adaga')).toHaveValue(1);
+
+    fireEvent.click(screen.getByRole('button', { name: 'Editar ficha' }));
+    const editClassSelect = screen.getByLabelText('Classe');
+    expect(editClassSelect).toHaveValue('bárbaro');
+    expect(within(editClassSelect).getAllByRole('option').map(option => option.value)).toEqual(CHARACTER_CLASSES);
+
+    await waitFor(() => {
+      const savedCharacters = JSON.parse(window.localStorage.getItem(CHARACTERS_KEY) || '[]');
+      expect(savedCharacters).toHaveLength(1);
+      expect(savedCharacters[0]).toMatchObject({
+        name: 'Brakka',
+        className: 'bárbaro',
+        spells: [],
+        inventory: [{ itemId: 'arma:Adaga', quantity: 1, equipped: false }],
+      });
+    });
   });
 });

@@ -4,8 +4,9 @@ Aplicação web de apoio a aventuras de RPG: consulte magias, organize personage
 
 ## Recursos
 
-- Pesquise e filtre magias, acesse cada uma por link direto e marque suas favoritas.
-- Crie perfis de personagens com grimórios individuais.
+- Pesquise e filtre magias, e adicione as escolhidas ao grimório do personagem ativo.
+- Crie perfis locais para as 13 classes de D&D 5e, com grimórios individuais e uma visão dedicada para cada personagem.
+- Veja a classe de cada personagem pelo ícone correspondente.
 - Organize o inventário de cada personagem, com quantidades e estado equipado.
 - Registre moedas e acompanhe o peso em kg e o valor dos itens em ouro, com valores numéricos.
 - Consulte o catálogo de itens e seus ícones.
@@ -29,4 +30,4 @@ O build de produção é gerado em `build/` e inclui o service worker Workbox.
 
 ## Créditos das imagens
 
-Veja as atribuições em [`src/assets/prints/CREDITS.md`](src/assets/prints/CREDITS.md). A página inicial também tem a seção “Créditos das gravuras”.
+Veja as atribuições das [gravuras da página inicial](src/assets/prints/CREDITS.md) e dos [ícones das classes](src/assets/classes/CREDITS.md).

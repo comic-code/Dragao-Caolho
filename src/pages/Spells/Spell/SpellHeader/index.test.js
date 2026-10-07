@@ -45,6 +45,8 @@ describe('SpellHeader grimoire action', () => {
     const button = screen.getByRole('button', { name: 'Adicionar Adivinhação ao grimório de Aelthar' });
 
     expect(button.querySelector('img')).toHaveAttribute('src', 'legacy-grimoire-closed');
+    expect(screen.queryByRole('link', { name: 'Abrir ficha de Adivinhação' })).not.toBeInTheDocument();
+    expect(screen.queryByTitle('Abrir ficha da magia')).not.toBeInTheDocument();
     expect(screen.queryByRole('button', { name: 'Adicionar aos favoritos' })).not.toBeInTheDocument();
 
     fireEvent.click(button);

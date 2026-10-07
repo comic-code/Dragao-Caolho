@@ -12,7 +12,7 @@ export default function SpellDetail() {
     <DetailPage>
       <BackLink to="/spells">← Voltar ao grimório</BackLink>
       {spell
-        ? <Spell spell={spell} showDetailLink={false} detail />
+        ? <Spell spell={spell} detail />
         : (
           <NotFound>
             <h1>Magia não encontrada</h1>
