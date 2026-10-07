@@ -1,4 +1,4 @@
-import { EMPTY_SPELL_FILTERS, filterSpells, slugify } from './spellUtils';
+import { EMPTY_SPELL_FILTERS, filterSpells, getSpellFilterOptions, slugify } from './spellUtils';
 
 function makeSpell({
   name,
@@ -96,6 +96,70 @@ describe('filterSpells', () => {
 
   test('combines ritual and material-component filters', () => {
     expect(namesFor({ ritual: true, component: 'M' })).toEqual(['Adivinhação', 'Alarme']);
+  });
+
+  test('filters metrics by exact normalized values instead of partial text matches', () => {
+    const metricSpells = [
+      {
+        ...makeSpell({ name: 'Ação normal' }),
+        casting: { time: 1, unit: 'ação' },
+        range: { value: 18, unit: 'metros' },
+        duration: { value: 1, unit: 'minutos', concentration: false },
+      },
+      {
+        ...makeSpell({ name: 'Ação bônus' }),
+        casting: { time: 1, unit: 'ação bonus' },
+        range: { value: 9, unit: 'metros' },
+        duration: { value: 10, unit: 'minutos', concentration: false },
+      },
+      {
+        ...makeSpell({ name: 'Dez minutos' }),
+        casting: { time: 10, unit: 'minutos' },
+        range: { value: 18, unit: 'metros' },
+        duration: { value: 10, unit: 'minutos', concentration: false },
+      },
+      {
+        ...makeSpell({ name: 'Um metro' }),
+        casting: { time: 1, unit: 'ação' },
+        range: { value: 1, unit: 'metros' },
+        duration: { value: 1, unit: 'minuto', concentration: false },
+      },
+    ];
+    const namesForMetrics = metricFilters => filterSpells(
+      metricSpells,
+      { ...EMPTY_SPELL_FILTERS, ...metricFilters }
+    ).map(spell => spell.name);
+
+    expect(namesForMetrics({ castingTime: '1 acao' })).toEqual(['Ação normal', 'Um metro']);
+    expect(namesForMetrics({ castingTime: '1 acao bonus' })).toEqual(['Ação bônus']);
+    expect(namesForMetrics({ range: '18 metros' })).toEqual(['Ação normal', 'Dez minutos']);
+    expect(namesForMetrics({ range: '1 metro' })).toEqual(['Um metro']);
+    expect(namesForMetrics({ duration: '1 minuto' })).toEqual(['Ação normal', 'Um metro']);
+  });
+
+  test('builds unique filter options with normalized labels from spell data', () => {
+    const metricSpells = [
+      {
+        ...makeSpell({ name: 'Bônus sem acento' }),
+        casting: { time: 1, unit: 'ação bonus' },
+        range: { value: 1, unit: 'metros' },
+        duration: { value: 1, unit: 'minutos', concentration: false },
+      },
+      {
+        ...makeSpell({ name: 'Bônus com acento' }),
+        casting: { time: 1, unit: 'ação bônus' },
+        range: { value: 1, unit: 'metro' },
+        duration: { value: 1, unit: 'minuto', concentration: false },
+      },
+    ];
+    const options = getSpellFilterOptions(metricSpells);
+
+    expect(options.castingTimes.filter(option => option.value === '1 acao bonus'))
+      .toEqual([{ value: '1 acao bonus', label: '1 ação bônus' }]);
+    expect(options.ranges.filter(option => option.value === '1 metro'))
+      .toEqual([{ value: '1 metro', label: '1 metro' }]);
+    expect(options.durations.filter(option => option.value === '1 minuto'))
+      .toEqual([{ value: '1 minuto', label: '1 minuto' }]);
   });
 });
 

@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { SpellFIltersWrapper, FilterIcon, DownIcon, UpIcon, Filter } from './styles';
 import filters from './filters';
+import SpellList from '../spells';
+import { getSpellFilterOptions } from '../../../utils/spellUtils';
+
+const spellFilterOptions = getSpellFilterOptions(SpellList);
 
 export default function SpellFilters({ filters: values, onChange, onClear }) {
   const [show, setShow] = useState(false);
@@ -65,15 +69,30 @@ export default function SpellFilters({ filters: values, onChange, onClear }) {
         </label>
         <label>
           Tempo de conjuração
-          <input value={values.castingTime} onChange={field('castingTime')} placeholder="Ex.: ação, 1 minuto" />
+          <select value={values.castingTime} onChange={field('castingTime')}>
+            <option value="">Qualquer tempo</option>
+            {spellFilterOptions.castingTimes.map(({ value, label }) => (
+              <option key={value} value={value}>{label}</option>
+            ))}
+          </select>
         </label>
         <label>
           Alcance
-          <input value={values.range} onChange={field('range')} placeholder="Ex.: toque, 18 metros" />
+          <select value={values.range} onChange={field('range')}>
+            <option value="">Qualquer alcance</option>
+            {spellFilterOptions.ranges.map(({ value, label }) => (
+              <option key={value} value={value}>{label}</option>
+            ))}
+          </select>
         </label>
         <label>
           Duração
-          <input value={values.duration} onChange={field('duration')} placeholder="Ex.: concentração, 1 hora" />
+          <select value={values.duration} onChange={field('duration')}>
+            <option value="">Qualquer duração</option>
+            {spellFilterOptions.durations.map(({ value, label }) => (
+              <option key={value} value={value}>{label}</option>
+            ))}
+          </select>
         </label>
         <div className="checkFilters">
           <label className="check">
