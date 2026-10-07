@@ -112,10 +112,10 @@ export const Panel = styled.section`
   .eyebrow { color: #70502b; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; }
   .countBadge { padding: 0.3rem 0.55rem; border-radius: 999px; background: #eee4d2; color: var(--blueDark); font-size: 0.75rem; font-weight: 700; text-align: center; }
   .spellbookHeadingActions { display: flex; align-items: center; gap: 0.5rem; }
-  .openGrimoireButton { width: 2.4rem; height: 2.4rem; flex: 0 0 2.4rem; display: grid; place-items: center; border: 1px solid #ded7c8; border-radius: 0.45rem; background: #f1eee6; }
-  .openGrimoireButton img { display: block; width: 1.8rem; height: 1.8rem; object-fit: contain; }
-  .openGrimoireButton:hover, .openGrimoireButton:focus-visible { background: #eee4d2; }
-  .openGrimoireButton:focus-visible { outline: 2px solid var(--brown); outline-offset: 2px; }
+  .openGrimoireButton { width: 2.7rem; height: 2.7rem; flex: 0 0 2.7rem; display: grid; place-items: center; border: 1px solid var(--blueDark); border-radius: 0.55rem; background: #e8ecf3; box-shadow: 0 2px 6px rgba(46, 56, 78, 0.16); transition: transform 0.16s, background 0.16s, box-shadow 0.16s; }
+  .openGrimoireButton img { display: block; width: 2rem; height: 2rem; object-fit: contain; }
+  .openGrimoireButton:hover { transform: translateY(-1px); background: #dbe3f0; box-shadow: 0 4px 9px rgba(46, 56, 78, 0.2); }
+  .openGrimoireButton:focus-visible { outline: 2px solid var(--brown); outline-offset: 2px; background: #dbe3f0; }
   .muted, .emptyMessage { color: #696a70; font-size: 0.9rem; line-height: 1.5; }
   .emptyMessage { padding: 0.8rem; border-radius: 0.45rem; background: #f1eee6; text-align: center; }
 

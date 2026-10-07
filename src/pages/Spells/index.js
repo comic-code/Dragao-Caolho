@@ -73,6 +73,11 @@ export default function Spells() {
     const savedSpellCount = Array.isArray(grimoireCharacter.spells) ? grimoireCharacter.spells.length : 0;
     const knownCountLabel = `${knownEntries.length} ${knownEntries.length === 1 ? 'magia' : 'magias'}`;
     const preparedCountLabel = `${preparedCount} ${preparedCount === 1 ? 'preparada' : 'preparadas'}`;
+    const unavailableSpellNote = unavailableEntries.length > 0 && (
+      <p className="unavailableSpellNote" role="status">
+        Magias fora do catálogo atual: {unavailableEntries.map(({ entry }) => entry.spellName).join(', ')}. Continuam salvas na ficha.
+      </p>
+    );
 
     return (
       <SpellsContainer>
@@ -91,19 +96,25 @@ export default function Spells() {
         </SpellControls>
 
         {knownEntries.length > 0
-          ? knownEntries.map(({ spell }) => <Spell key={spell.name} spell={spell} characterId={grimoireCharacter.id} />)
-          : renderEmpty(savedSpellCount === 0
-            ? `O grimório de ${characterName} está vazio.`
-            : 'Nenhuma magia desse grimório está no catálogo atual.')
+          ? (
+            <>
+              {knownEntries.map(({ spell }) => <Spell key={spell.name} spell={spell} characterId={grimoireCharacter.id} />)}
+              {unavailableSpellNote}
+            </>
+          )
+          : (
+            <div className="emptyGrimoire">
+              {renderEmpty(savedSpellCount === 0
+                ? `O grimório de ${characterName} está vazio.`
+                : 'Nenhuma magia desse grimório está no catálogo atual.')
+              }
+              {savedSpellCount === 0 && (
+                <Link className="emptyGrimoireLink" to="/spells">Adicionar magias do catálogo</Link>
+              )}
+              {unavailableSpellNote}
+            </div>
+          )
         }
-        {savedSpellCount === 0 && (
-          <Link className="emptyGrimoireLink" to="/spells">Adicionar magias do catálogo</Link>
-        )}
-        {unavailableEntries.length > 0 && (
-          <p className="unavailableSpellNote" role="status">
-            Magias fora do catálogo atual: {unavailableEntries.map(({ entry }) => entry.spellName).join(', ')}. Continuam salvas na ficha.
-          </p>
-        )}
       </SpellsContainer>
     );
   }

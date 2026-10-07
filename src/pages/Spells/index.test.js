@@ -79,7 +79,7 @@ describe('Spells page', () => {
 
   test('shows a catalog link when the selected character grimoire is empty', () => {
     const character = { id: 'lyra', name: 'Lyra', className: 'mago', spells: [] };
-    render(
+    const { container } = render(
       <MemoryRouter initialEntries={['/spells?view=grimoire&characterId=lyra']}>
         <GlobalContext.Provider value={{
           characters: [character],
@@ -91,7 +91,10 @@ describe('Spells page', () => {
       </MemoryRouter>
     );
 
+    const emptyState = container.querySelector('.emptyGrimoire');
     expect(screen.getByText('O grimório de Lyra está vazio.')).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'Adicionar magias do catálogo' })).toHaveAttribute('href', '/spells');
+    expect(emptyState).toContainElement(screen.getByText('O grimório de Lyra está vazio.'));
+    expect(emptyState).toContainElement(screen.getByRole('link', { name: 'Adicionar magias do catálogo' }));
   });
 });

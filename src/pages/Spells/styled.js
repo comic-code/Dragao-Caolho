@@ -24,11 +24,27 @@ export const SpellsContainer = styled.main`
     img { width: 2.5rem; height: auto; }
   }
 
+  .emptyGrimoire {
+    width: min(100% - 1rem, 1040px);
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.5rem auto 1rem;
+  }
+
+  .emptyGrimoire .noSpells {
+    max-width: 100%;
+    justify-content: center;
+    margin: 0.75rem 0 0;
+  }
+
   .emptyGrimoireLink {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1rem;
+    margin: 0;
     padding: 0.65rem 0.9rem;
     border: 1px solid var(--blueDark);
     border-radius: 0.45rem;
@@ -42,6 +58,11 @@ export const SpellsContainer = styled.main`
     margin: 0.5rem auto 1rem;
     color: #5a5b63;
     text-align: center;
+  }
+
+  .emptyGrimoire .unavailableSpellNote {
+    width: 100%;
+    margin: 0;
   }
 `;
 
