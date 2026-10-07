@@ -2,6 +2,9 @@
   "name": "dragao-caolho",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "dependencies": {
     "@styled-icons/bootstrap": "^10.46.0",
     "@styled-icons/boxicons-regular": "^10.46.0",
