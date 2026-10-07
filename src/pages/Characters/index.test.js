@@ -22,6 +22,30 @@ describe('Characters page', () => {
     window.localStorage.clear();
   });
 
+  test('lists characters and opens the selected character workspace', async () => {
+    window.localStorage.setItem(CHARACTERS_KEY, JSON.stringify([
+      { id: 'aelthar', name: 'Aelthar', className: 'mago', subclass: '', level: 3, spells: [], inventory: [], coins: {} },
+      { id: 'mira', name: 'Mira', className: 'bardo', subclass: 'Lore', level: 2, spells: [], inventory: [], coins: {} },
+    ]));
+    window.localStorage.setItem(ACTIVE_CHARACTER_KEY, 'aelthar');
+    renderCharacters();
+
+    expect(screen.getByRole('button', { name: 'Abrir ficha de Aelthar' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Abrir ficha de Mira' })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: 'Magias' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: 'Equipamentos' })).not.toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: 'Abrir ficha de Mira' }));
+    expect(screen.getByRole('heading', { name: 'Mira' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Magias' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Equipamentos' })).toBeInTheDocument();
+    await waitFor(() => expect(window.localStorage.getItem(ACTIVE_CHARACTER_KEY)).toBe('mira'));
+
+    fireEvent.click(screen.getByRole('button', { name: 'Voltar para personagens' }));
+    expect(screen.getByRole('button', { name: 'Abrir ficha de Aelthar' })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: 'Magias' })).not.toBeInTheDocument();
+  });
+
   test('creates a character, prepares a class spell, adds an item, and restores saved data', async () => {
     const { unmount } = renderCharacters();
 
@@ -34,6 +58,15 @@ describe('Characters page', () => {
     fireEvent.change(within(form).getByLabelText('Subclasse (opcional)'), { target: { value: 'Evocação' } });
     fireEvent.click(within(form).getByRole('button', { name: 'Criar personagem' }));
 
+    const characterCard = screen.getByRole('button', { name: 'Abrir ficha de Aelthar' });
+    expect(characterCard).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: 'Magias' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: 'Equipamentos' })).not.toBeInTheDocument();
+    fireEvent.click(characterCard);
+
+    expect(screen.getByRole('heading', { name: 'Magias' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Equipamentos' })).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Editar ficha' }));
     expect(screen.getByLabelText('Nome')).toHaveValue('Aelthar');
     expect(screen.getByLabelText('Classe conjuradora')).toHaveValue('mago');
 
@@ -69,11 +102,18 @@ describe('Characters page', () => {
     });
     expect(window.localStorage.getItem(ACTIVE_CHARACTER_KEY)).toBe(savedCharacters[0].id);
 
+    fireEvent.click(screen.getByRole('button', { name: 'Voltar para personagens' }));
+    expect(screen.getByRole('button', { name: 'Abrir ficha de Aelthar' })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: 'Magias' })).not.toBeInTheDocument();
+
     unmount();
     renderCharacters();
 
-    expect(screen.getByLabelText('Nome')).toHaveValue('Aelthar');
+    const restoredCharacterCard = screen.getByRole('button', { name: 'Abrir ficha de Aelthar' });
+    fireEvent.click(restoredCharacterCard);
     expect(screen.getByLabelText('Estado de Armadura Arcana')).toHaveValue('prepared');
     expect(screen.getByLabelText('Quantidade de Adaga')).toHaveValue(1);
+    fireEvent.click(screen.getByRole('button', { name: 'Editar ficha' }));
+    expect(screen.getByLabelText('Nome')).toHaveValue('Aelthar');
   });
 });
