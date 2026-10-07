@@ -1,85 +1,113 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import { FilterRight } from '@styled-icons/bootstrap';
 import { DownArrow, UpArrow } from '@styled-icons/boxicons-regular';
 
-export const SpellFIltersWrapper = styled.div`
-  width: 80%;
-  border: 3px solid var(--brown);
-  margin: 1rem 0.5rem;
-  margin-bottom: 0.5rem;
-  border-radius: 0.5rem;
-  max-height: ${props => props.show ? '13rem' : 'calc(2rem + 5px)'};
-  transition: 0.2s max-height;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow-y: hidden;
-
-  @media (max-width: 700px) {
-    width: 100%;
-    max-height: ${props => props.show ? '15rem' : 'calc(2rem + 5px)'};
-    
-  }
+export const SpellFIltersWrapper = styled.section`
+  width: min(100% - 1rem, 1040px);
+  margin: 1rem auto;
+  border: 2px solid var(--brown);
+  border-radius: 0.65rem;
+  overflow: hidden;
+  background: var(--white);
 
   button.toggleFilter {
+    width: 100%;
+    min-height: 2.75rem;
     display: flex;
     justify-content: space-between;
-    padding: 0.5rem;
-    border-radius: 0.3rem;
-    border-bottom-left-radius: ${props => props.show ? '0' :'0.3rem'};
-    border-bottom-right-radius: ${props => props.show ? '0' :'0.3rem'};
-    border-bottom: ${props => props.show ? '3px solid var(--brown)' : '3px solid var(--blueDark)'};
-    transition: 0.5s border-radius, 0.8s border-bottom;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
     background: var(--blueDark);
-    width: 100%;
-    height: 2rem;
-    font-weight: bold;
-    div {
-      color: var(--white);
+    color: var(--white);
+    font-weight: 700;
+
+    span {
       display: flex;
-      justify-content: center;
       align-items: center;
+      gap: 0.35rem;
+      color: inherit;
     }
+
+    .filterCount {
+      min-width: 1.25rem;
+      min-height: 1.25rem;
+      display: inline-grid;
+      place-items: center;
+      padding: 0 0.25rem;
+      border-radius: 999px;
+      background: var(--brown);
+      color: var(--blueDark);
+      font-size: 0.72rem;
+    }
+
+    svg { fill: var(--white); }
+    &:focus-visible { outline: 3px solid var(--brown); outline-offset: -3px; }
   }
 `;
 
 export const FilterIcon = styled(FilterRight)`
   fill: var(--white);
-  margin-right: 0.25rem;
-`
+`;
 
 export const DownIcon = styled(DownArrow)`
   fill: var(--white);
-`
+`;
 
 export const UpIcon = styled(UpArrow)`
   fill: var(--white);
-`
+`;
 
-export const Filter = styled.label`
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  font-weight: bold;
-  margin: 0.5rem;
+export const Filter = styled.div`
+  display: ${props => props.$show ? 'grid' : 'none'};
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 175px), 1fr));
+  align-items: end;
+  gap: 0.75rem;
+  padding: 1rem;
 
   label {
-    margin: 0.25rem;
-
-    input, select {
-      margin-left: 0.25rem;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    min-width: 0;
+    font-size: 0.9rem;
+    font-weight: 700;
   }
 
-  button {
-    margin: 0.25rem;
-    margin-left: auto;
-    border: 2px solid var(--blueDark);
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    font-size: 1rem;
+  input, select {
+    width: 100%;
+    min-width: 0;
+    background: white;
+  }
+
+  .checkFilters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  label.check {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.45rem;
+    white-space: nowrap;
+
+    input { width: 1rem; height: 1rem; }
+  }
+
+  .filterActions {
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 1 / -1;
+  }
+
+  .filterActions button {
+    padding: 0.55rem 0.9rem;
+    border: 1px solid var(--blueDark);
+    border-radius: 0.4rem;
     background: var(--brown);
     color: var(--white);
-    font-weight: bold;
+    font-weight: 700;
   }
-`
+  .filterActions button:disabled { cursor: default; opacity: 0.55; }
+`;

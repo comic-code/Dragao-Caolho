@@ -1,110 +1,94 @@
-import { useEffect, useState, useContext } from "react";
-import { SpellFIltersWrapper, FilterIcon, DownIcon, UpIcon, Filter } from "./styles";
+import { useState } from 'react';
+import { SpellFIltersWrapper, FilterIcon, DownIcon, UpIcon, Filter } from './styles';
 import filters from './filters';
-import {GlobalContext} from '../../../contexts/Global';
 
-export default function SpellFilters({ setFilteredSpells, spellList, justSavedSpells, savedSpells }) {
-  const { setIsFilteringSpells } = useContext(GlobalContext);
+export default function SpellFilters({ filters: values, onChange, onClear }) {
   const [show, setShow] = useState(false);
-  const [name, setName] = useState('');
-  const [classe, setClasse] = useState('');
-  const [school, setSchool] = useState(''); 
-  const [level, setLevel] = useState(''); 
-  
-  function handleClear() {
-    setName(''); setClasse(''); setSchool(''); setLevel('');
+  const activeFilterCount = Object.values(values).filter(value => (
+    typeof value === 'boolean' ? value : String(value ?? '').trim() !== ''
+  )).length;
+
+  function field(name) {
+    return event => onChange(name, event.target.value);
   }
 
-  useEffect(() => {
-    if(!show) {
-      setFilteredSpells([]);
-    } else {
-      let toFilter;
-      if(justSavedSpells) {
-        toFilter = [...savedSpells]
-      } else {
-        toFilter = [...spellList];
-      }
-      
-      let filtered =  []
-      
-      if(name) {
-        filtered = toFilter.filter(spell => {
-          const nameLowercase = spell.name.toLowerCase();
-          const originalNameLowercase = spell.originalName.toLowerCase();
-  
-          return (nameLowercase.includes(name.toLocaleLowerCase()) || originalNameLowercase.includes(name.toLocaleLowerCase()))
-
-        });
-      }
-
-      if(classe) {
-        filtered = filtered.length 
-          ? filtered.filter(spell => spell.classes.includes(classe)) 
-          : toFilter.filter(spell => spell.classes.includes(classe)) 
-      }
-      
-      if(level !== "") {
-        filtered = filtered.length 
-        ? filtered.filter(spell => spell.level == level) 
-        : toFilter.filter(spell => spell.level == level) 
-      }
-
-      if(school) {
-        filtered = filtered.length 
-        ? filtered.filter(spell => spell.school.includes(school)) 
-        : toFilter.filter(spell => spell.school.includes(school)) 
-      }
-      setIsFilteringSpells(name || classe || level !== "" || school ? true : false);
-      setFilteredSpells(filtered);
-    }
-  }, [name, classe, school, level, justSavedSpells, savedSpells, spellList, setFilteredSpells]);
-
   return (
-    <SpellFIltersWrapper show={show}>
-      <button className="toggleFilter" onClick={() => {setShow(!show)}}>
-        <div>
-          <FilterIcon size={20} /> Filtros
-        </div>
-        {show
-          ? <UpIcon size={20} className="animationShow"/>
-          : <DownIcon size={20} className="animationShow"/>
-        }
+    <SpellFIltersWrapper>
+      <button
+        className="toggleFilter"
+        type="button"
+        aria-expanded={show}
+        aria-controls="spell-filter-fields"
+        aria-label={activeFilterCount ? `Filtros, ${activeFilterCount} ativos` : 'Filtros'}
+        onClick={() => setShow(current => !current)}
+      >
+        <span><FilterIcon size={20} /> Filtros{activeFilterCount > 0 && <span className="filterCount">{activeFilterCount}</span>}</span>
+        {show ? <UpIcon size={20} aria-hidden="true" /> : <DownIcon size={20} aria-hidden="true" />}
       </button>
-      <Filter>
+
+      <Filter id="spell-filter-fields" $show={show}>
         <label>
-          Nome: 
-          <input value={name} onChange={e => setName(e.target.value)} />
+          Nome
+          <input type="search" value={values.name} onChange={field('name')} placeholder="Português ou inglês" />
         </label>
         <label>
-          Classe:
-          <select value={classe} onChange={e => setClasse(e.target.value)}>
+          Classe
+          <select value={values.classe} onChange={field('classe')}>
             <option value="">Todas</option>
             {filters.classes.map(classe => <option key={classe} value={classe}>{classe}</option>)}
           </select>
         </label>
         <label>
-          Nível:
-          <select value={level} onChange={e => setLevel(e.target.value)}>
+          Nível
+          <select value={values.level} onChange={field('level')}>
             <option value="">Todos</option>
-            {filters.levels.map(level => <option key={level} value={level}>
-              {level === 0 
-                ? 'Truque'
-                : `Nível ${level}`
-              }
-            </option>)}
+            {filters.levels.map(level => (
+              <option key={level} value={level}>{level === 0 ? 'Truque' : `Nível ${level}`}</option>
+            ))}
           </select>
         </label>
         <label>
-          Escola:
-          <select value={school} onChange={e => setSchool(e.target.value)}>
+          Escola
+          <select value={values.school} onChange={field('school')}>
             <option value="">Todas</option>
             {filters.schools.map(school => <option key={school} value={school}>{school}</option>)}
           </select>
         </label>
-
-        <button onClick={handleClear}>Limpar</button>
+        <label>
+          Componente
+          <select value={values.component} onChange={field('component')}>
+            <option value="">Qualquer</option>
+            <option value="V">Verbal (V)</option>
+            <option value="S">Somático (S)</option>
+            <option value="M">Material (M)</option>
+          </select>
+        </label>
+        <label>
+          Tempo de conjuração
+          <input value={values.castingTime} onChange={field('castingTime')} placeholder="Ex.: ação, 1 minuto" />
+        </label>
+        <label>
+          Alcance
+          <input value={values.range} onChange={field('range')} placeholder="Ex.: toque, 18 metros" />
+        </label>
+        <label>
+          Duração
+          <input value={values.duration} onChange={field('duration')} placeholder="Ex.: concentração, 1 hora" />
+        </label>
+        <div className="checkFilters">
+          <label className="check">
+            <input type="checkbox" checked={values.ritual} onChange={event => onChange('ritual', event.target.checked)} />
+            Ritual
+          </label>
+          <label className="check">
+            <input type="checkbox" checked={values.concentration} onChange={event => onChange('concentration', event.target.checked)} />
+            Exige concentração
+          </label>
+        </div>
+        <div className="filterActions">
+          <button type="button" onClick={onClear} disabled={activeFilterCount === 0}>Limpar filtros</button>
+        </div>
       </Filter>
     </SpellFIltersWrapper>
-  )
+  );
 }

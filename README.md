@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Dragão Caolho
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicação web de apoio a aventuras de RPG: consulte magias, organize personagens, grimórios e equipamentos.
 
-## Available Scripts
+## Recursos
 
-In the project directory, you can run:
+- Pesquise e filtre magias, acesse cada uma por link direto e marque suas favoritas.
+- Crie perfis de personagens com grimórios individuais.
+- Organize o inventário de cada personagem, com quantidades e estado equipado.
+- Registre moedas e acompanhe o peso em kg e o valor dos itens em ouro, com valores numéricos.
+- Consulte o catálogo de itens e seus ícones.
 
-### `npm start`
+## Dados e uso offline
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Os favoritos, personagens, grimórios, inventários e moedas ficam no `localStorage` deste navegador. Não há conta nem sincronização; limpar os dados do navegador apaga os dados salvos pelo app.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+O modo offline depende de uma primeira visita online. O service worker Workbox só é registrado em produção e requer HTTPS (ou `localhost`).
 
-### `npm test`
+## Executar localmente
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm ci
+npm start
+CI=true npm test -- --watchAll=false
+npm run build
+```
 
-### `npm run build`
+O build de produção é gerado em `build/` e inclui o service worker Workbox.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Créditos das imagens
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Veja as atribuições em [`src/assets/prints/CREDITS.md`](src/assets/prints/CREDITS.md). A página inicial também tem a seção “Créditos das gravuras”.

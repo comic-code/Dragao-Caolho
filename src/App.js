@@ -8,6 +8,12 @@ import Loading from './components/Loading';
 import Items from './pages/Items';
 
 const Spells = lazy(() => import('./pages/Spells'));
+const SpellDetail = lazy(() => import('./pages/SpellDetail'));
+const Characters = lazy(() => import('./pages/Characters'));
+
+function LazyPage({ children }) {
+  return <Suspense fallback={<Loading />}>{children}</Suspense>;
+}
 
 export default function App() {
   return (
@@ -18,11 +24,9 @@ export default function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="items" element={<Items />} />
-          <Route path="spells" element={
-            <Suspense fallback={<Loading />}>
-              <Spells />
-            </Suspense>
-          } />
+          <Route path="characters" element={<LazyPage><Characters /></LazyPage>} />
+          <Route path="spells" element={<LazyPage><Spells /></LazyPage>} />
+          <Route path="spells/:spellSlug" element={<LazyPage><SpellDetail /></LazyPage>} />
         </Routes>
       </div>
     </GlobalProvider>
