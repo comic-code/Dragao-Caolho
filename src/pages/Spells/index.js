@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { GlobalContext } from '../../contexts/Global';
 import Spell from './Spell';
 import SpellList from './spells';
-import { Grimoire, SpellContextBar, SpellsContainer } from './styled';
+import { Grimoire, SpellContextBar, SpellControls, SpellsContainer } from './styled';
 import GrimoireIcon from '../../assets/icons/favorite.png';
 import OpenGrimoireIcon from '../../assets/icons/openGrimoire.png';
 import SkullIcon from '../../assets/icons/skull.png';
@@ -37,22 +37,24 @@ export default function Spells() {
 
   return (
     <SpellsContainer>
-      <SpellsQuestions />
-      <SpellFilters filters={filters} onChange={updateFilter} onClear={() => setFilters({ ...EMPTY_SPELL_FILTERS })} />
-      <SpellContextBar>
-        {characters.length > 0
-          ? (
-            <label>
-              Grimório ativo
-              <select value={activeCharacter?.id || ''} onChange={event => setActiveCharacterId(event.target.value)}>
-                {characters.map(character => <option key={character.id} value={character.id}>{character.name || 'Sem nome'}</option>)}
-              </select>
-            </label>
-          )
-          : <p>Crie um personagem para salvar magias no grimório. <Link to="/characters">Criar personagem</Link></p>
-        }
-        <span className="resultCount" role="status">{visibleSpells.length} {visibleSpells.length === 1 ? 'magia' : 'magias'}{justSavedSpells ? ' salvas' : ' encontradas'}</span>
-      </SpellContextBar>
+      <SpellControls>
+        <SpellsQuestions />
+        <SpellFilters filters={filters} onChange={updateFilter} onClear={() => setFilters({ ...EMPTY_SPELL_FILTERS })} />
+        <SpellContextBar>
+          {characters.length > 0
+            ? (
+              <label>
+                Grimório ativo
+                <select value={activeCharacter?.id || ''} onChange={event => setActiveCharacterId(event.target.value)}>
+                  {characters.map(character => <option key={character.id} value={character.id}>{character.name || 'Sem nome'}</option>)}
+                </select>
+              </label>
+            )
+            : <p>Crie um personagem para salvar magias no grimório. <Link to="/characters">Criar personagem</Link></p>
+          }
+          <span className="resultCount" role="status">{visibleSpells.length} {visibleSpells.length === 1 ? 'magia' : 'magias'}{justSavedSpells ? ' salvas' : ' encontradas'}</span>
+        </SpellContextBar>
+      </SpellControls>
 
       {justSavedSpells && savedSpells.length === 0
         ? renderEmpty('Sem magias salvas')

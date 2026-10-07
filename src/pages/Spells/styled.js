@@ -25,6 +25,13 @@ export const SpellsContainer = styled.main`
   }
 `;
 
+export const SpellControls = styled.div`
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 export const SpellContextBar = styled.section`
   width: min(100% - 1rem, 1040px);
   display: flex;

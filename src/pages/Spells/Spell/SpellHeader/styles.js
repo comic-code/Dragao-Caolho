@@ -69,10 +69,9 @@ export const SpellHeaderWrapper = styled.header`
     border: 2px solid var(--blueDark);
     padding: 0.1rem 0.3rem;
     color: var(--white);
-    position: absolute;
     display: flex;
-    right: -10px;
-    bottom: -2px;
+    align-self: flex-end;
+    margin-top: 0.25rem;
     align-items: center;
     justify-content: center;
   }

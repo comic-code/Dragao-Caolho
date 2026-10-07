@@ -15,7 +15,9 @@ export const SpellInfosWrapper = styled(Row)`
     padding: 0.5rem;
     border-radius: 0.5rem;
     font-weight: bold;
-    min-width: 7.5rem;
+    flex: 1 1 0;
+    min-width: 0;
+    overflow-wrap: anywhere;
 
     img {
       width: 30px;
